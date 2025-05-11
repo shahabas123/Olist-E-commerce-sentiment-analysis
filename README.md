@@ -65,6 +65,76 @@ Customer reviews in the dataset are unstructured and in **Portuguese**. This pro
 
 1. Clone the repository:
 
-```bash
+
 git clone https://github.com/shahabas123/Olist-E-commerce-sentiment-analysis.git
 cd Olist-E-commerce-sentiment-analysis
+
+
+2.Set up dependencies:
+pip install -r requirements.txt
+
+
+3. Download the pre-trained model and vectorizer from the **[Releases](https://github.com/shahabas123/Olist-E-commerce-sentiment-analysis/releases)** section of this repository.
+
+Place them in your project directory:
+
+- `rf_model.pkl`
+- `tfidf_vectorizer.pkl`
+
+4. Run prediction using pickle
+ import pickle
+
+# Load model and vectorizer
+with open('rf_model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+with open('tfidf_vectorizer.pkl', 'rb') as f:
+    vectorizer = pickle.load(f)
+
+# Predict sentiment
+text = ["excellent product"]
+vec_text = vectorizer.transform(text)
+pred = model.predict(vec_text)
+
+print(pred)  # Output: Positive / Neutral / Negative
+
+
+Sample prediction:
+Input: "Excellent product!"
+Output: Positive
+
+overview
+
+📈 Streamlit Web App
+This project also includes a Streamlit-based web application with a user-friendly interface. It has the following pages:
+
+Home Page: Introduction and basic description of the sentiment classification.
+
+Prediction Page: Enter a custom review and get the sentiment prediction instantly.
+
+Analysis Page: Offers in-depth visual insights including:
+
+📉 Sentiment trend over time
+
+🚨 Negative sentiment alerts
+
+📦 Worst-performing product categories
+
+This makes the project suitable for both end-users and business stakeholders looking to monitor and improve customer satisfaction.
+
+ Acknowledgements
+ 
+Olist on Kaggle
+
+Scikit-learn
+
+Google Translate API via googletrans
+
+Streamlit
+
+📬 Contact
+
+Shahabas Ali
+Email: shahabas751@gmail.com
+GitHub: @shahabas123
+
