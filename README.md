@@ -34,7 +34,7 @@ Customer reviews in the dataset are unstructured and in **Portuguese**. This pro
   - Random Forest
   - AdaBoost
   - Multinomial Naive Bayes (optional)
-- ✅ Model and vectorizer saved using `joblib`
+- ✅ Model and vectorizer saved using `pickle`
 - ✅ Predicts sentiment for custom inputs like `"Excellent product!"`
 
 ---
