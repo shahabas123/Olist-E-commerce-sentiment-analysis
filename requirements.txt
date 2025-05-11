@@ -6,3 +6,4 @@ nltk==3.8.1
 deep-translator==1.11.4
 plotly==5.13.0
 seaborn==0.12.2
+scikit-learn==1.5.0
